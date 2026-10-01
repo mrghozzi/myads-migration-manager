@@ -1,0 +1,15 @@
+{
+    "name": "MyAds Migration Manager",
+    "slug": "migration-manager",
+    "version": "1.0.0",
+    "author": "MrGhozzi",
+    "author_url": "https://github.com/mrghozzi",
+    "description": "Professional database migration manager and health inspector for MYADS. Detects pending migrations, ghost records, and missing tables with 1-click execution.",
+    "thumbnail": "thumbnail.png",
+    "siteweb": "https://github.com/mrghozzi/myads-migration-manager",
+    "latest": "https://github.com/mrghozzi/myads-migration-manager/releases/latest",
+    "min_myads": "4.5.6",
+    "max_myads": "4.6.x",
+    "ADStn_url": "myads-migration-manager",
+    "settings_url": "/admin/migration-manager"
+}
