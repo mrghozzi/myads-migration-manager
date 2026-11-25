@@ -61,7 +61,7 @@ Route::middleware(['web', 'auth', 'admin'])->group(function () {
     Route::post('/admin/migration-manager/run', function (Request $request) {
         $migration = $request->input('migration');
         
-        if (!$migration) {
+        if (!is_string($migration) || preg_match('/^[A-Za-z0-9_]+$/', $migration) !== 1) {
             return redirect()->route('admin.migration-manager.index')->with('error', 'لم يتم تحديد ملف التهجير.');
         }
 
@@ -103,7 +103,7 @@ Route::middleware(['web', 'auth', 'admin'])->group(function () {
     Route::post('/admin/migration-manager/delete-ghost', function (Request $request) {
         $migration = $request->input('migration');
         
-        if (!$migration) {
+        if (!is_string($migration) || preg_match('/^[A-Za-z0-9_]+$/', $migration) !== 1) {
             return redirect()->route('admin.migration-manager.index')->with('error', 'لم يتم تحديد ملف التهجير.');
         }
 

@@ -2,6 +2,10 @@
 
 All notable changes to the **Migration Manager** plugin will be documented in this file.
 
+## [1.1.1] - 2026-11-26
+### Security
+- **Migration Name Path-Traversal Validation (`boot.php`)**: Enforced strict `/^[A-Za-z0-9_]+$/` character validation on the `migration` parameter in `/admin/migration-manager/run` and `/admin/migration-manager/delete-ghost`.
+
 ## [1.1.0] - 2026-11-05
 ### Added / Enhanced
 - **MYADS v4.7.0 Platform Compatibility**: Tested and verified discovery of migrations across core and plugin directories under Laravel 12.
